@@ -1,0 +1,249 @@
+<h3 class="ui header">{{_("FreeIOE Cloud Settings")}} </h3>
+<table class="ui celled basic table">
+	<thead>
+		<tr>
+			<th>{{_("ID")}}</th>
+			<th>{{_("Cloud ID")}}</th>
+			<th>{{_("Cloud Host")}}</th>
+			<th>{{_("Cloud Port")}}</th>
+			<th>{{_("Cloud Tiemout")}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				{{sys.ID}}
+			</td>
+			<td>
+				<div class="ui action input">
+					{% if edit_enable or edit_sn then %}
+					<input id="ioe_cloud_id" value="{{cfg.ID}}" type="text">
+					<button id="ioe_cloud_id_btn" class="ui yellow right labeled icon button">
+						<i class="check icon"></i>
+						{{_("Change")}}
+					</button>
+					{% else %}
+						{{cfg.ID}}
+					{% end %}
+				</div>
+			</td>
+			<td>
+				<div class="ui action input">
+					{% if edit_enable then %}
+					<input id="mqtt_host" value="{{cfg.HOST}}" type="text">
+					<button id="mqtt_host_btn" class="ui yellow right labeled icon button">
+						<i class="check icon"></i>
+						{{_("Change")}}
+					</button>
+					{% else %}
+						{{cfg.HOST}}
+					{% end %}
+				</div>
+			</td>
+			<td>
+				<div class="ui action input">
+					{% if edit_enable then %}
+					<input id="mqtt_port" value="{{cfg.PORT}}" type="number">
+					<button id="mqtt_port_btn" class="ui yellow right labeled icon button">
+						<i class="check icon"></i>
+						{{_("Change")}}
+					</button>
+					{% else %}
+						{{cfg.PORT}}
+					{% end %}
+				</div>
+			</td>
+			</td>
+			<td>
+				<div class="ui action input">
+					{% if edit_enable then %}
+					<input id="mqtt_keepalive" value="{{cfg.KEEPALIVE}}" type="number">
+					<button id="mqtt_keepalive_btn" class="ui yellow right labeled icon button">
+						<i class="check icon"></i>
+						{{_("Change")}}
+					</button>
+					{% else %}
+						{{cfg.KEEPALIVE}}
+					{% end %}
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3 class="ui header">{{_("Data Upload Options")}} </h3>
+<table class="ui celled basic table">
+	<thead>
+		<tr>
+			<th>{{_("Data Upload")}}</th>
+			{% if cfg.DATA_UPLOAD then %}
+			<th>{{_("COV TTL")}} (seconds)</th>
+			<th>{{_("Upload Period")}} (ms)</th>
+			{% end %}
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				{% if cfg.DATA_UPLOAD then %}
+				<div class="ui fitted toggle checked checkbox">
+					<input id="data_upload" type="checkbox" checked="true">
+					<label></label>
+				</div>
+				{% else %}
+				<div class="ui fitted toggle checkbox">
+					<input id="data_upload" type="checkbox">
+					<label></label>
+				</div>
+				{% end %}
+			</td>
+			{% if cfg.DATA_UPLOAD then %}
+			<td>
+				<div class="ui action input">
+					<input id="cov_ttl" value="{{cfg.COV_TTL or 300}}" type="number">
+					<button id="cov_ttl_btn" class="ui yellow right labeled icon button">
+						<i class="check icon"></i>
+						{{_("Change")}}
+					</button>
+				</div>
+			</td>
+			<td>
+				<div class="ui action input">
+					<input id="data_upload_period" value="{{cfg.DATA_UPLOAD_PERIOD or 1000}}" type="number">
+					<button id="data_upload_period_btn" class="ui yellow right labeled icon button">
+						<i class="check icon"></i>
+						{{_("Change")}}
+					</button>
+				</div>
+			</td>
+			{% end %}
+		</tr>
+	</tbody>
+</table>
+
+<h3 class="ui header">{{_("Data Cache Options")}} </h3>
+<table class="ui celled basic table">
+	<thead>
+		<tr>
+			<th>{{_("Data Cache")}}</th>
+			{% if cfg.DATA_CACHE then %}
+			<th>{{_("Cache per File")}}</th>
+			<th>{{_("Max File Count")}}</th>
+			<th>{{_("Fire Frequence")}} (ms)</th>
+			{% end %}
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				{% if cfg.DATA_CACHE then %}
+				<div class="ui fitted toggle checked checkbox">
+					<input id="data_cache" type="checkbox" checked="true">
+					<label></label>
+				</div>
+				{% else %}
+				<div class="ui fitted toggle checkbox">
+					<input id="data_cache" type="checkbox">
+					<label></label>
+				</div>
+				{% end %}
+			</td>
+			{% if cfg.DATA_CACHE then %}
+			<td>
+				<div class="ui action input">
+					<input id="data_cache_per_file" value="{{cfg.DATA_CACHE_PER_FILE or 10240}}" type="number">
+					<button id="data_cache_per_file_btn" class="ui yellow right labeled icon button">
+						<i class="check icon"></i>
+						{{_("Change")}}
+					</button>
+				</div>
+			</td>
+			<td>
+				<div class="ui action input">
+					<input id="data_cache_limit" value="{{cfg.DATA_CACHE_LIMIT or 4096}}" type="number">
+					<button id="data_cache_limit_btn" class="ui yellow right labeled icon button">
+						<i class="check icon"></i>
+						{{_("Change")}}
+					</button>
+				</div>
+			</td>
+			<td>
+				<div class="ui action input">
+					<input id="data_cache_fire_freq" value="{{cfg.DATA_CACHE_FIRE_FREQ or 1000}}" type="number">
+					<button id="data_cache_fire_freq_btn" class="ui yellow right labeled icon button">
+						<i class="check icon"></i>
+						{{_("Change")}}
+					</button>
+				</div>
+			</td>
+			{% end %}
+		</tr>
+	</tbody>
+</table>
+
+
+<h3 class="ui header">{{_("Upload Settings")}} </h3>
+<table class="ui celled basic table">
+	<thead>
+		<tr>
+			<th>{{_("Stat Upload")}}</th>
+			<th>{{_("Comm Upload")}}</th>
+			<th>{{_("Log Upload")}}</th>
+			<th>{{_("Event Upload")}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				{% if cfg.STAT_UPLOAD then %}
+				<div class="ui fitted toggle checked checkbox">
+					<input id="stat_upload" type="checkbox" checked="true">
+					<label></label>
+				</div>
+				{% else %}
+				<div class="ui fitted toggle checkbox">
+					<input id="stat_upload" type="checkbox">
+					<label></label>
+				</div>
+				{% end %}
+			</td>
+			<td>
+				{% if cfg.COMM_UPLOAD and cfg.COMM_UPLOAD > nowtime then %}
+				<div class="ui toggle checked checkbox">
+					<input id="comm_upload" type="checkbox" checked="true">
+					<label>{{cfg.COMM_UPLOAD - nowtime}} {{_("seconds")}}</label>
+				</div>
+				{% else %}
+				<div class="ui toggle checkbox">
+					<input id="comm_upload" type="checkbox">
+					<label>60 {{_("seconds")}}</label>
+				</div>
+				{% end %}
+			</td>
+			<td>
+				{% if cfg.LOG_UPLOAD and cfg.LOG_UPLOAD > nowtime then %}
+				<div class="ui toggle checked checkbox">
+					<input id="log_upload" type="checkbox" checked="true">
+					<label>{{cfg.LOG_UPLOAD - nowtime}} {{_("seconds")}}</label>
+				</div>
+				{% else %}
+				<div class="ui toggle checkbox">
+					<input id="log_upload" type="checkbox">
+					<label>60 {{_("seconds")}}</label>
+				</div>
+				{% end %}
+
+			</td>
+			<td>
+				<div class="ui action input">
+					<input id="event_upload" value="{{cfg.EVENT_UPLOAD}}" type="number">
+					<button id="event_upload_btn" class="ui yellow right labeled icon button">
+						<i class="check icon"></i>
+						{{_("Change")}}
+					</button>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+

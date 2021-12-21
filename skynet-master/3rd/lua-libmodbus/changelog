@@ -1,0 +1,33 @@
+0.6.1 2020 July
+No functional change: tag acrobatics for luarocks+releases at the same time
+
+0.6 2020 July
+add modbus_rtu_{set,get}_serial_mode
+
+0.5 2019 August
+Fix compilation under windows/mingw
+
+0.4.2: 2018 November
+Fix bad free when closing RTU contexts. #5
+Fix compat with lua 5.3 when backwards compat is turned off #6
+
+0.4.1: 2018 June
+Drop unintended debug
+Fix documentation
+
+0.4: 2018 June
+Add number helpers for dealing with 16/32bit signed/unsigned
+Add tostring() functionality
+Add documentation
+
+0.3.1: 2017 March
+Support building with musl libc
+
+0.3: 2017 March
+Add support for send_raw_request
+
+0.2: 2016-09-09
+Add explicit connection close() method
+
+0.1: Initial release
+Basic overage of libmodbus api

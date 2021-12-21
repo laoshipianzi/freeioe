@@ -1,0 +1,155 @@
+{% layout="base.html" %}
+{-main_header-}
+{-main_header-}
+
+{-main-}
+<h1 class="header"> {{_("Cloud Settings")}} </h1>
+
+{(widget/cloud.html, {sys=sys, cfg=cfg, nowtime=nowtime, edit_enable=edit_enable, edit_sn=edit_sn})}
+
+<h3 class="ui top attached header">
+	{{_("Control")}}
+</h3>
+<div class="ui attached basic segment">
+	<div id="mydimmer" class="ui disabled dimmer">
+		<div class="ui massive text loader" id="myloader">{{_("Loading")}}</div>
+	</div>
+
+	<div class="ui purple button" onclick="sys_quit();">{{_("Restart")}}</div>
+</div>
+
+
+<div class="ui icon message">
+	<i class="inbox icon"></i>
+	<div class="content">
+		<div class="header">
+			<div id="message_ui">
+				{{ message }}
+			</div>
+		</div>
+	</div>
+</div>
+{-main-}
+
+{-script-}
+<script>
+function refresh_page() {
+	window.location.replace("/cloud");
+};
+function enable_option(option, enable) {
+	$.post("/cloud", {from_web:true, action:'enable', option:option, enable:enable}, function(data) {
+		$('#message_ui').html('<i>' + data + '</i>');
+	})
+	.done(function() {
+		setTimeout('refresh_page()', 500);
+	})
+	.fail(function() {
+		$('#message_ui').html('<i>{{_("Failed to send request")}}</i>');
+	});
+};
+function mqtt_option(option, value) {
+	$.post("/cloud", {from_web:true, action:'mqtt', option:option, value:value}, function(data) {
+		$('#message_ui').html('<i>' + data + '</i>');
+	})
+	.done(function() {
+		setTimeout('refresh_page()', 500);
+	})
+	.fail(function() {
+		$('#message_ui').html('<i>{{_("Failed to send request")}}</i>');
+	});
+};
+function cloud_option(option, value) {
+	$.post("/cloud", {from_web:true, action:'cloud', option:option, value:value}, function(data) {
+		$('#message_ui').html('<i>' + data + '</i>');
+	})
+	.done(function() {
+		setTimeout('refresh_page()', 500);
+	})
+	.fail(function() {
+		$('#message_ui').html('<i>{{_("Failed to send request")}}</i>');
+	});
+};
+function sys_quit() {
+	$.post("/sys/control", {from_web:true, action:'quit'}, function(data) {
+		$('#message_ui').html('<i>' + data + '</i>');
+	})
+	.done(function() {
+		setTimeout('refresh_page()', 6000);
+	})
+	.fail(function() {
+		$('#message_ui').html('<i>{{_("Failed to send system restart request")} </i>');
+	});
+};
+
+$(document).ready(function(){
+	$("#data_upload").change(function() {
+		var enable = $('#data_upload').is(':checked');
+		enable_option('data', enable);
+	});
+	$("#data_cache").change(function() {
+		var enable = $('#data_cache').is(':checked');
+		enable_option('cache', enable);
+	});
+	$("#event_upload_btn").click(function() {
+		var value = $('#event_upload').val();
+		enable_option('event', value);
+	});
+	$("#stat_upload").change(function() {
+		var enable = $('#stat_upload').is(':checked');
+		enable_option('stat', enable);
+	});
+	$("#comm_upload").change(function() {
+		var enable = $('#comm_upload').is(':checked');
+		if(enable) {
+			enable_option('comm', 60);
+		} else {
+			enable_option('comm', 0);
+		}
+	});
+	$("#log_upload").change(function() {
+		var enable = $('#log_upload').is(':checked');
+		if(enable) {
+			enable_option('log', 60);
+		} else {
+			enable_option('log', 0);
+		}
+	});
+	$("#mqtt_host_btn").click(function() {
+		var value = $('#mqtt_host').val();
+		mqtt_option('host', value);
+	});
+	$("#mqtt_port_btn").click(function() {
+		var value = $('#mqtt_port').val();
+		mqtt_option('port', value);
+	});
+	$("#mqtt_keepalive_btn").click(function() {
+		var value = $('#mqtt_keepalive').val();
+		mqtt_option('keepalive', value);
+	});
+	$("#ioe_cloud_id_btn").click(function() {
+		var value = $('#ioe_cloud_id').val();
+		mqtt_option('id', value);
+	});
+	$("#cov_ttl_btn").click(function() {
+		var value = $('#cov_ttl').val();
+		cloud_option('cov_ttl', value);
+	});
+	$("#data_upload_period_btn").click(function() {
+		var value = $('#data_upload_period').val();
+		cloud_option('data_upload_period', value);
+	});
+	$("#data_cache_per_file_btn").click(function() {
+		var value = $('#data_cache_per_file').val();
+		cloud_option('data_cache_per_file', value);
+	});
+	$("#data_cache_limit_btn").click(function() {
+		var value = $('#data_cache_limit').val();
+		cloud_option('data_cache_limit', value);
+	});
+	$("#data_cache_fire_freq_btn").click(function() {
+		var value = $('#data_cache_fire_freq').val();
+		cloud_option('data_cache_fire_freq', value);
+	});
+});
+</script>
+{-script-}

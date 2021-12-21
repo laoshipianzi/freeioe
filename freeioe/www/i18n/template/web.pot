@@ -1,0 +1,872 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+
+msgid "Action"
+msgstr ""
+
+
+msgid "Action %s is not allowed"
+msgstr ""
+
+
+msgid "Action is accepted"
+msgstr ""
+
+
+msgid "All Logs"
+msgstr ""
+
+
+msgid "All Messages"
+msgstr ""
+
+
+msgid "Application"
+msgstr ""
+
+
+msgid "Application Center Host"
+msgstr ""
+
+
+msgid "Application Conf Center Host"
+msgstr ""
+
+
+msgid "Application Configruation"
+msgstr ""
+
+
+msgid "Application Debuger"
+msgstr ""
+
+
+msgid "Application Development Book"
+msgstr ""
+
+
+msgid "Application ID"
+msgstr ""
+
+
+msgid "Application List"
+msgstr ""
+
+
+msgid "Application configuration changed!"
+msgstr ""
+
+
+msgid "Application option changed!"
+msgstr ""
+
+
+msgid "Application package must be zip file"
+msgstr ""
+
+
+msgid "Application started!"
+msgstr ""
+
+
+msgid "Application stoped!"
+msgstr ""
+
+
+msgid "Auto Start"
+msgstr ""
+
+
+msgid "Beta Usage Warning"
+msgstr ""
+
+
+msgid "CLA"
+msgstr ""
+
+
+msgid "COV TTL"
+msgstr ""
+
+
+msgid "CPU Arch"
+msgstr ""
+
+
+msgid "CPU Model"
+msgstr ""
+
+
+msgid "Cache per File"
+msgstr ""
+
+
+msgid "Cannot enable beta. Error: %s"
+msgstr ""
+
+
+msgid "Change"
+msgstr ""
+
+
+msgid "Check Beta"
+msgstr ""
+
+
+msgid "Check Updates"
+msgstr ""
+
+
+msgid "Check updates done!"
+msgstr ""
+
+
+msgid "Cloud"
+msgstr ""
+
+
+msgid "Cloud Host"
+msgstr ""
+
+
+msgid "Cloud ID"
+msgstr ""
+
+
+msgid "Cloud Port"
+msgstr ""
+
+
+msgid "Cloud Settings"
+msgstr ""
+
+
+msgid "Cloud Tiemout"
+msgstr ""
+
+
+msgid "Cloud option is changed, you need restart FreeIOE to apply changes!"
+msgstr ""
+
+
+msgid "Code"
+msgstr ""
+
+
+msgid "Comm Data Watcher"
+msgstr ""
+
+
+msgid "Comm Upload"
+msgstr ""
+
+
+msgid "Commands"
+msgstr ""
+
+
+msgid "Comms"
+msgstr ""
+
+
+msgid "Configuration"
+msgstr ""
+
+
+msgid "Contribute"
+msgstr ""
+
+
+msgid "Control"
+msgstr ""
+
+
+msgid "Create"
+msgstr ""
+
+
+msgid "Create an new application"
+msgstr ""
+
+
+msgid "Dashboard"
+msgstr ""
+
+
+msgid "Data Cache"
+msgstr ""
+
+
+msgid "Data Cache Options"
+msgstr ""
+
+
+msgid "Data Upload"
+msgstr ""
+
+
+msgid "Data Upload Options"
+msgstr ""
+
+
+msgid "Description"
+msgstr ""
+
+
+msgid "Development Book"
+msgstr ""
+
+
+msgid "Device"
+msgstr ""
+
+
+msgid "Device List"
+msgstr ""
+
+
+msgid "Device Reboot"
+msgstr ""
+
+
+msgid "Device Template"
+msgstr ""
+
+
+msgid "Device command fired!"
+msgstr ""
+
+
+msgid "Device output fired!"
+msgstr ""
+
+
+msgid "Device will be reboot after five seconds!"
+msgstr ""
+
+
+msgid "Devices"
+msgstr ""
+
+
+msgid "Devices List"
+msgstr ""
+
+
+msgid "Discussion forum"
+msgstr ""
+
+
+msgid "Document"
+msgstr ""
+
+
+msgid "Document Index"
+msgstr ""
+
+
+msgid "Documents"
+msgstr ""
+
+
+msgid "Enable Cloud Web Mapping"
+msgstr ""
+
+
+msgid "Enable Configuration Upload"
+msgstr ""
+
+
+msgid "Enable SymLink Connect"
+msgstr ""
+
+
+msgid "Event List"
+msgstr ""
+
+
+msgid "Event Upload"
+msgstr ""
+
+
+msgid "Events"
+msgstr ""
+
+
+msgid "Extension List"
+msgstr ""
+
+
+msgid "Extensions"
+msgstr ""
+
+
+msgid "Failed to check system updates"
+msgstr ""
+
+
+msgid "Failed to check system version"
+msgstr ""
+
+
+msgid "Failed to get application configuration"
+msgstr ""
+
+
+msgid "Failed to send request"
+msgstr ""
+
+
+msgid "Failed to send request "
+msgstr ""
+
+
+msgid "Failed to send start request"
+msgstr ""
+
+
+msgid "Failed to send stop request"
+msgstr ""
+
+
+msgid "Failed to send system restart request"
+msgstr ""
+
+
+msgid "Failed to send uninstall request"
+msgstr ""
+
+
+msgid "Failed to send upgrade request"
+msgstr ""
+
+
+msgid "Fetch file from server"
+msgstr ""
+
+
+msgid "File Editor"
+msgstr ""
+
+
+msgid "Fire Frequence"
+msgstr ""
+
+
+msgid "Forum"
+msgstr ""
+
+
+msgid "FreeIOE"
+msgstr ""
+
+
+msgid "FreeIOE Cloud Settings"
+msgstr ""
+
+
+msgid "FreeIOE Forum"
+msgstr ""
+
+
+msgid "FreeIOE Uptime"
+msgstr ""
+
+
+msgid "FreeIOE Wiki"
+msgstr ""
+
+
+msgid "FreeIOE device in not in beta mode!"
+msgstr ""
+
+
+msgid "FreeIOE is an open source platform for internet of everythings. Please follow us on GitHub!!!"
+msgstr ""
+
+
+msgid "Getting Started"
+msgstr ""
+
+
+msgid "Git Version"
+msgstr ""
+
+
+msgid "Help Make FreeIOE Better"
+msgstr ""
+
+
+msgid "Home"
+msgstr ""
+
+
+msgid "ID"
+msgstr ""
+
+
+msgid "IOE Network"
+msgstr ""
+
+
+msgid "Information"
+msgstr ""
+
+
+msgid "Inputs"
+msgstr ""
+
+
+msgid "Installed Application List"
+msgstr ""
+
+
+msgid "Installed Extensions"
+msgstr ""
+
+
+msgid "Instance Name"
+msgstr ""
+
+
+msgid "Introduction"
+msgstr ""
+
+
+msgid "Issue Tracker"
+msgstr ""
+
+
+msgid "Learn more"
+msgstr ""
+
+
+msgid "Loading"
+msgstr ""
+
+
+msgid "Log Upload"
+msgstr ""
+
+
+msgid "Log Watcher"
+msgstr ""
+
+
+msgid "Login"
+msgstr ""
+
+
+msgid "Logout"
+msgstr ""
+
+
+msgid "Logs"
+msgstr ""
+
+
+msgid "Max File Count"
+msgstr ""
+
+
+msgid "Meta Information"
+msgstr ""
+
+
+msgid "More Information"
+msgstr ""
+
+
+msgid "Name"
+msgstr ""
+
+
+msgid "New Application"
+msgstr ""
+
+
+msgid "New Instance Name"
+msgstr ""
+
+
+msgid "New application"
+msgstr ""
+
+
+msgid "No"
+msgstr ""
+
+
+msgid "OS"
+msgstr ""
+
+
+msgid "OS Uptime"
+msgstr ""
+
+
+msgid "Offline"
+msgstr ""
+
+
+msgid "Online"
+msgstr ""
+
+
+msgid "Online Editor"
+msgstr ""
+
+
+msgid "Online Editor "
+msgstr ""
+
+
+msgid "Oooops! Error %d :("
+msgstr ""
+
+
+msgid "Oooops! Sorry The Page Not Found :("
+msgstr ""
+
+
+msgid "Option is invalid!"
+msgstr ""
+
+
+msgid "Outputs"
+msgstr ""
+
+
+msgid "PKG option is changed!"
+msgstr ""
+
+
+msgid "Package File"
+msgstr ""
+
+
+msgid "Password"
+msgstr ""
+
+
+msgid "Password Retyped Incorrect!"
+msgstr ""
+
+
+msgid "Password updated!!"
+msgstr ""
+
+
+msgid "Profile"
+msgstr ""
+
+
+msgid "Quality"
+msgstr ""
+
+
+msgid "Query application updates"
+msgstr ""
+
+
+msgid "Query extension updates"
+msgstr ""
+
+
+msgid "Re-Type"
+msgstr ""
+
+
+msgid "Refresh"
+msgstr ""
+
+
+msgid "Reinstall From Store"
+msgstr ""
+
+
+msgid "Remember Me"
+msgstr ""
+
+
+msgid "Remove Cloud Web Mapping"
+msgstr ""
+
+
+msgid "Remove SymLink Connect"
+msgstr ""
+
+
+msgid "Rename Application"
+msgstr ""
+
+
+msgid "Rename application"
+msgstr ""
+
+
+msgid "Restart"
+msgstr ""
+
+
+msgid "Return the Homepage"
+msgstr ""
+
+
+msgid "Rollback Time"
+msgstr ""
+
+
+msgid "SN"
+msgstr ""
+
+
+msgid "Script"
+msgstr ""
+
+
+msgid "Script is running!"
+msgstr ""
+
+
+msgid "Select a file from the tree."
+msgstr ""
+
+
+msgid "Send Command"
+msgstr ""
+
+
+msgid "Send Output"
+msgstr ""
+
+
+msgid "Send command"
+msgstr ""
+
+
+msgid "Send command to device"
+msgstr ""
+
+
+msgid "Send output to device"
+msgstr ""
+
+
+msgid "Setting"
+msgstr ""
+
+
+msgid "Settings"
+msgstr ""
+
+
+msgid "Sign In"
+msgstr ""
+
+
+msgid "Sign Up"
+msgstr ""
+
+
+msgid "Skip Ack"
+msgstr ""
+
+
+msgid "Skynet Git Version"
+msgstr ""
+
+
+msgid "Skynet Version"
+msgstr ""
+
+
+msgid "Source code"
+msgstr ""
+
+
+msgid "Start Application"
+msgstr ""
+
+
+msgid "Stat Upload"
+msgstr ""
+
+
+msgid "Stop Application"
+msgstr ""
+
+
+msgid "Sys Logs"
+msgstr ""
+
+
+msgid "System Control"
+msgstr ""
+
+
+msgid "System Settings"
+msgstr ""
+
+
+msgid "System Time"
+msgstr ""
+
+
+msgid "System Upgrade"
+msgstr ""
+
+
+msgid "System upgrade ack is done!"
+msgstr ""
+
+
+msgid "System upgrade is done! System will be offline for a few seconds!"
+msgstr ""
+
+
+msgid "System will be restart after five seconds!"
+msgstr ""
+
+
+msgid "Test View Page"
+msgstr ""
+
+
+msgid "The COV TTL cannot be less than 60 seconds"
+msgstr ""
+
+
+msgid "The Data Cache File count limit cannot more than 4096"
+msgstr ""
+
+
+msgid "The Data Cache Fire Freq cannot more than 1000 ms"
+msgstr ""
+
+
+msgid "The Data Cache Per File cannot be less than 1024"
+msgstr ""
+
+
+msgid "The upload period cannot be less than 1000 ms (one second)"
+msgstr ""
+
+
+msgid "There is no new system updates"
+msgstr ""
+
+
+msgid "ThingsCloud"
+msgstr ""
+
+
+msgid "This will delete all local changes! Are you sure?"
+msgstr ""
+
+
+msgid "Timestamp"
+msgstr ""
+
+
+msgid "Total Memory"
+msgstr ""
+
+
+msgid "UNAME"
+msgstr ""
+
+
+msgid "Uninstall Application"
+msgstr ""
+
+
+msgid "Upgrade ACK"
+msgstr ""
+
+
+msgid "Upgrade To"
+msgstr ""
+
+
+msgid "Upload"
+msgstr ""
+
+
+msgid "Upload Application"
+msgstr ""
+
+
+msgid "Upload Period"
+msgstr ""
+
+
+msgid "Upload Settings"
+msgstr ""
+
+
+msgid "Upload an new application package"
+msgstr ""
+
+
+msgid "User Profile"
+msgstr ""
+
+
+msgid "Using Beta"
+msgstr ""
+
+
+msgid "Value"
+msgstr ""
+
+
+msgid "Value Type"
+msgstr ""
+
+
+msgid "Version"
+msgstr ""
+
+
+msgid "Warning"
+msgstr ""
+
+
+msgid "Welcome %s"
+msgstr ""
+
+
+msgid "Welcome in FreeIOE"
+msgstr ""
+
+
+msgid "Wiki"
+msgstr ""
+
+
+msgid "With Skynet"
+msgstr ""
+
+
+msgid "Write output"
+msgstr ""
+
+
+msgid "Yes"
+msgstr ""
+
+
+msgid "You are not logined!"
+msgstr ""
+
+
+msgid "dmesg"
+msgstr ""
+
+
+msgid "seconds"
+msgstr ""
+
+

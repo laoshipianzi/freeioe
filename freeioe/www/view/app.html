@@ -1,0 +1,500 @@
+{% layout="base.html" %}
+{-main_header-}
+{-main_header-}
+
+{-main-}
+<h1 class="header"> {{_("Installed Application List")}} </h1>
+
+{(widget/app_list.html, {apps=apps, force_upgrade=force_upgrade, using_beta=using_beta})}
+
+<div class="ui basic segment">
+	<div class="ui stackable two column grid">
+		<div class="column">
+			{% if using_beta then %}
+			<div class="ui olive icon button new_app" data-content="{{_('Create an new application')}}"><i class="ui add icon"></i>{{_("New Application")}}</div>
+			<div class="ui orange icon button upload_app" data-content="{{_('Upload an new application package')}}"><i class="ui upload icon"></i>{{_("Upload Application")}}</div>
+			{% end %}
+			<div class="ui teal icon button check_update" data-content="{{_('Query application updates')}}"><i class="ui refresh icon"></i>{{_("Check Updates")}}</div>
+			<a class="ui green icon button" href="/ext"> <i class="ui cubes icon"></i> {{_("Extensions")}}</a>
+		</div>
+
+		<div class="column">
+			<div class="ui stackable two column grid">
+				<div class="column">
+					{% if using_beta then %}
+					{% if not apps['ioe_frpc'] then %}
+					<form class="ui app_frpc form" action="/app/install" method="post">
+						<input type="hidden" name="from_web" value="1">
+						<input type="hidden" name="version" value="latest">
+						<input type="hidden" name="app" value="frpc">
+						<input type="hidden" name="inst" value="ioe_frpc">
+						<div class="ui green submit button"> {{_("Enable Cloud Web Mapping")}}</div>
+					</form>
+					{% else %}
+					<form class="ui app_frpc form" action="/app/uninstall" method="post">
+						<input type="hidden" name="from_web" value="1">
+						<input type="hidden" name="inst" value="ioe_frpc">
+						<div class="ui orange submit button"> {{_("Remove Cloud Web Mapping")}}</div>
+					</form>
+					{% end %}
+					{% end %}
+				</div>
+
+				<div class="column">
+					{% if not apps['ioe_symlink'] then %}
+					<form class="ui app_frpc form" action="/app/install" method="post">
+						<input type="hidden" name="from_web" value="1">
+						<input type="hidden" name="version" value="latest">
+						<input type="hidden" name="app" value="symlink">
+						<input type="hidden" name="inst" value="ioe_symlink">
+						<div class="ui green submit button"> {{_("Enable SymLink Connect")}}</div>
+					</form>
+					{% else %}
+					<form class="ui app_frpc form" action="/app/uninstall" method="post">
+						<input type="hidden" name="from_web" value="1">
+						<input type="hidden" name="inst" value="ioe_symlink">
+						<div class="ui orange submit button"> {{_("Remove SymLink Connect")}}</div>
+					</form>
+					{% end %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="ui small app_conf modal">
+	<i class="close icon"></i>
+	<div class="header">
+		{{_("Application Configruation")}}
+	</div>
+	<div class="content">
+		<form class="ui app_conf form" action="/app/conf" method="post" accept-charset="utf-8">
+			<input type="hidden" name="inst" value="">
+			<input type="hidden" name="conf" value="">
+			<div class="field">
+				<label>{{_("Configuration")}}</label>
+				<div id="json_editor" style="width: 600px;height: 300px;"></div>
+			</div>
+			<div class="ui primary submit button">{{_("Change")}}</div>
+		</form>
+	</div>
+</div>
+
+<div class="ui small app_rename modal">
+	<i class="close icon"></i>
+	<div class="header">
+		{{_("Rename application")}}
+	</div>
+	<div class="content">
+		<form class="ui app_rename form" action="/app/rename" method="post" accept-charset="utf-8">
+			<div class="field">
+				<label>{{_("Application")}}</label>
+				<input id="rename_inst" name="inst" readonly="" type="text" value="">
+			</div>
+			<div class="field">
+				<label>{{_("New Instance Name")}}</label>
+				<input value="" name="new_name" type="text">
+			</div>
+			<div class="ui primary submit button">{{_("Change")}}</div>
+		</form>
+	</div>
+</div>
+
+{% if using_beta then %}
+<div class="ui mini new_app modal">
+	<i class="close icon"></i>
+	<div class="header">
+		{{_("New application")}}
+	</div>
+	<div class="content">
+		<form class="ui new_app form" action="/app/new" method="post" accept-charset="utf-8">
+			<div class="field">
+				<label>{{_("Instance Name")}}</label>
+				<input value="" name="inst" type="text">
+			</div>
+			<div class="field">
+				<label>{{_("Application ID")}}</label>
+				<input value="" name="app" type="text">
+			</div>
+			<div class="ui primary submit button">{{_("Create")}}</div>
+			<div class="ui success message"></div>
+			<div class="ui error message"></div>
+		</form>
+	</div>
+</div>
+
+<div class="ui small upload_app modal">
+	<i class="close icon"></i>
+	<div class="header">
+		{{_("New application")}}
+	</div>
+	<div class="content">
+		<form class="ui upload_app form" action="/app/upload" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+			<div class="inline field">
+				<label>{{_("Instance Name")}}</label>
+				<input value="" name="inst" type="text">
+			</div>
+			<div class="inline field">
+				<label>{{_("Application ID")}}</label>
+				<input value="" name="app" type="text">
+			</div>
+			<div class="field">
+				<label>{{_("Package File")}} </label>
+				<input type="file" name="app_file"/>
+			</div>
+			<div class="ui tiny teal progress">
+				<div class="bar"></div>
+			</div>
+
+			<div class="ui primary submit button">{{_("Upload")}}</div>
+			<div class="ui success message"></div>
+			<div class="ui error message"></div>
+		</form>
+	</div>
+</div>
+{% end %}
+
+<div class="ui basic msg_print form">
+	<div class="ui success message"></div>
+	<div class="ui error message"></div>
+</div>
+
+{-main-}
+
+{-script-}
+<script type="text/javascript" src="/assets/ace/ace.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/library/tablesort.min.js" charset="utf-8"></script>
+
+<script>
+var msg_form = null;
+function reset_message() {
+	msg_form.removeClass('success').removeClass('error');
+};
+function print_err_message(msg) {
+	reset_message();
+	console.log('Exception:' + msg);
+	msg_form.find('.ui.error.message').html(msg);
+	msg_form.addClass('error');
+};
+function print_message(msg) {
+	reset_message();
+	console.log('OK:' + msg);
+	msg_form.find('.ui.success.message').html(msg);
+	msg_form.addClass('success');
+};
+function refresh_page() {
+	window.location.replace("/app");
+}
+function upgrade_app(inst, app, version) {
+	$.post("/app/upgrade", {from_web:true, inst:inst, app:app, version:version}, function(data) {
+		print_message('<i>' + data + '</i>');
+	})
+	.done(function() {
+		setTimeout('refresh_page()', 10000);
+	})
+	.fail(function() {
+		print_err_message('<i>{{_("Failed to send upgrade request")}}</i>');
+	});
+}
+function uninstall_app(inst) {
+	$.post("/app/uninstall", {from_web:true, inst:inst}, function(data) {
+		print_message('<i>' + data + '</i>');
+	})
+	.done(function() {
+		setTimeout('refresh_page()', 3000);
+	})
+	.fail(function() {
+		print_err_message('<i>{{_("Failed to send uninstall request")}}</i>');
+	});
+}
+
+function start_app(inst) {
+	$.post("/app/start", {from_web:true, inst:inst}, function(data) {
+		print_message('<i>' + data + '</i>');
+	})
+	.done(function() {
+		setTimeout('refresh_page()', 3000);
+		var filter = '#'+ inst + '_actions_col ';
+		$(filter + '.ui.button.start').hide();
+		$(filter + '.ui.button.stop').show();
+	})
+	.fail(function() {
+		print_err_message('<i>{{_("Failed to send start request")}}</i>');
+	});
+}
+
+function stop_app(inst) {
+	$.post("/app/stop", {from_web:true, inst:inst, reason:'Stop from web'}, function(data) {
+		print_message('<i>' + data + '</i>');
+	})
+	.done(function() {
+		setTimeout('refresh_page()', 3000);
+		var filter = '#'+ inst + '_actions_col ';
+		$(filter + '.ui.button.stop').hide();
+		$(filter + '.ui.button.start').show();
+	})
+	.fail(function() {
+		print_err_message('<i>{{_("Failed to send stop request")}}</i>');
+	});
+}
+
+function conf_app(inst, editor) {
+	$.get("/app/conf", {from_web:true, inst:inst}, function(data) {
+		$('.ui.app_conf.form input[name="inst"]').val(inst);
+		$('.ui.app_conf.form input[name="conf"]').val(JSON.stringify(data));
+		editor.session.setValue(JSON.stringify(data, null, 4));
+		$('.ui.app_conf.modal')
+			.modal({
+				closable  : true
+			})
+			.modal('show')
+		;
+	})
+	.done(function() {
+	})
+	.fail(function() {
+		print_err_message('<i>{{_("Failed to get application configuration")}}</i>');
+	});
+}
+
+function option_app(inst, option, value) {
+	$.post("/app/option", {from_web:true, inst:inst, option:option, value:value}, function(data) {
+		print_message('<i>' + data + '</i>');
+	})
+	.done(function() {
+	})
+	.fail(function() {
+		print_err_message('<i>{{_("Failed to send stop request")}}</i>');
+	});
+}
+
+function check_app_update(inst, app, version) {
+	$.get("/app/check_update", {from_web:true, inst:inst, app:app}, function(data) {
+		if (data && data.version && data.version > version) {
+			var vstr = data.version;
+			if (data.beta) {
+				vstr = "beta." + vstr;
+			};
+			var btn = $('.ui.button.upgrade[data-inst="' + inst + '"]');
+			btn.attr('data-version', vstr);
+			btn.find('.label').text(vstr);
+			btn.show();
+		};
+	})
+	.done(function() {
+	})
+	.fail(function() {
+	});
+}
+
+function check_app_version(inst, app, version) {
+	$.get("/app/check_version", {from_web:true, inst:inst, app:app, version:version}, function(data) {
+		if (data && data.type) {
+			if (data.type == "release") {
+				$('#'+inst+'_version_col').html(version + '<i class="green check icon"></i>');
+				$('.ui.button.refresh[data-inst="' + inst + '"]').hide();
+			} else if (data.type == "beta") {
+				$('#'+inst+'_version_col').html(version + '<i class="yellow warning sign icon"></i>');
+				$('.ui.button.refresh[data-inst="' + inst + '"]').hide();
+			} else if (data.type == "local") {
+				$('#'+inst+'_version_col').html(version + '<i class="blue write square icon"></i>');
+				$('.ui.button.refresh[data-inst="' + inst + '"]').show();
+			} else {
+				$('#'+inst+'_version_col').html(version + '<i class="red attention icon"></i>');
+				$('.ui.button.refresh[data-inst="' + inst + '"]').hide();
+			}
+		};
+	})
+	.done(function() {
+	})
+	.fail(function() {
+	});
+}
+function check_for_update() {
+	{% for k, v in pairs(apps) do %}
+	{% if v.version ~= 0 then %}
+	check_app_version('{{k}}', '{{v.name}}', {{v.version}});
+	check_app_update('{{k}}', '{{v.name}}', {{v.version}});
+	{% end %}
+	{% end %}
+	print_message("{{_('Check updates done!')}}");
+}
+
+$(document).ready(function(){
+	var editor = ace.edit("json_editor");
+	editor.session.setMode("ace/mode/json");
+
+	$('.ui.sortable.table').tablesort().data('tablesort').sort($("th.default-sort"));
+
+	//setTimeout('check_for_updates()', 1000);
+	msg_form = $('.ui.msg_print.form');
+	{% if not force_upgrade then %}
+	$('.ui.button.upgrade').hide();
+	{% end %}
+	$('.ui.button.upgrade').click(function() {
+		upgrade_app($(this).data('inst'), $(this).data('app'), $(this).data('version'));
+	});
+	$('.ui.button.start').click(function() {
+		start_app($(this).data('inst'));
+	});
+	$('.ui.button.stop').click(function() {
+		stop_app($(this).data('inst'));
+	});
+	$('.ui.button.conf').click(function() {
+		conf_app($(this).data('inst'), editor);
+	});
+	$('.ui.button.rename').click(function() {
+		$('.ui.app_rename.modal #rename_inst').val($(this).data('inst'));
+		$('.ui.app_rename.modal')
+			.modal({
+				closable  : true
+			})
+			.modal('show')
+		;
+	});
+	$('.ui.button.uninstall').click(function() {
+		uninstall_app($(this).data('inst'));
+	});
+	$('.ui.button.editor').click(function() {
+		window.location.href = "/app_editor?app=" + $(this).data('inst');
+	});
+	$('.ui.button.refresh').click(function() {
+		upgrade_app($(this).data('inst'), $(this).data('app'), $(this).data('version'));
+	});
+	$('.ui.toggle.checkbox.auto_start').checkbox({
+		onChecked: function() {
+			option_app($(this).data('inst'), 'auto', 1);
+		},
+		// uncheck all children
+		onUnchecked: function() {
+			option_app($(this).data('inst'), 'auto', 0);
+		}
+	});
+	$('.ui.segment .ui.button.check_update').click(function() {
+		var btn = $(this);
+		btn.addClass('disabled');
+		check_for_update();
+		setTimeout(function() {
+			btn.removeClass('disabled');
+		}, 5000);
+	});
+	$('.ui.app_frpc.form').ajaxForm({
+		beforeSend: function () {
+			reset_message();
+		},
+		success: function (response) {
+			print_message(response)
+			setTimeout(refresh_page, 5000);
+		},
+		error: function(xhr) {
+			print_err_message(xhr.responseText);
+		}
+	});
+	
+	$('.ui.app_conf.form').ajaxForm({
+		beforeSerialize: function($form, options) {
+			var input = $('.ui.app_conf.form input[name="conf"]');
+			input.val(editor.session.getValue());
+			$('.ui.app_conf.modal').modal('hide');
+		},
+		beforeSend: function () {
+			reset_message();
+		},
+		success: function (response) {
+			print_message(response)
+			setTimeout(refresh_page, 5000);
+		},
+		error: function(xhr) {
+			print_err_message(xhr.responseText);
+		}
+	});
+
+	$('.ui.app_rename.form').ajaxForm({
+		beforeSend: function () {
+			reset_message();
+		},
+		success: function (response) {
+			print_message(response)
+			setTimeout(refresh_page, 1000);
+		},
+		error: function(xhr) {
+			print_err_message(xhr.responseText);
+		}
+	});
+
+
+{% if using_beta then %}
+	$('.ui.segment .ui.button.new_app').click(function() {
+		$('.ui.new_app.modal')
+			.modal({
+				closable  : true
+			})
+			.modal('show')
+		;
+	});
+	var new_app_form = $('.ui.new_app.form');
+	new_app_form.form({
+		fields: {
+			app: ['minLength[3]', 'empty'],
+			inst: ['minLength[3]', 'empty']
+		}
+	});
+	new_app_form.ajaxForm({
+		beforeSend: function () {
+			$('.ui.new_app.modal').modal('hide');
+			reset_message();
+		},
+		success: function (response) {
+			print_message(response)
+			setTimeout(refresh_page, 5000);
+		},
+		error: function(xhr) {
+			print_err_message(xhr.responseText);
+		}
+	});
+
+	$('.ui.segment .ui.button.upload_app').click(function() {
+		$('.ui.upload_app.modal')
+			.modal({
+				closable  : true
+			})
+			.modal('show')
+		;
+	});
+	var upload_form = $('.ui.upload_app.form');
+	var upload_bar = upload_form.find('.bar');
+
+	upload_form.form({
+		fields: {
+			inst: ['minLength[3]', 'empty'],
+			app: ['minLength[3]', 'empty'],
+			app_file: 'empty'
+		}
+	});
+
+	upload_form.ajaxForm({
+		beforeSend: function() {
+			upload_form.removeClass('success').removeClass('error');
+		},
+		uploadProgress: function(event, position, total, percentComplete) {
+			var percentVal = percentComplete + '%';
+			upload_bar.width(percentVal);
+		},
+		success: function(response) {
+			upload_form.find('.ui.success.message').html(response);
+			upload_form.addClass('success');
+			setTimeout(refresh_page, 2000);
+		},
+		complete: function(xhr) {
+		},
+		error: function(xhr) {
+			console.log('Upload Exception:' + xhr.responseText);
+			upload_form.addClass('error');
+			upload_form.find('.ui.error.message').html(xhr.responseText);
+		}
+	});
+{% end %}
+
+});
+</script>
+{-script-}

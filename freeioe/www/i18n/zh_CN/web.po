@@ -1,0 +1,734 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Action"
+msgstr "动作"
+
+msgid "Action %s is not allowed"
+msgstr "不合法的操作 %s"
+
+msgid "Action is accepted"
+msgstr "修改已应用"
+
+msgid "All Logs"
+msgstr "所有日志"
+
+msgid "All Messages"
+msgstr "所有消息"
+
+msgid "Application"
+msgstr "应用"
+
+msgid "Application Center Host"
+msgstr "应用中心地址"
+
+msgid "Application Conf Center Host"
+msgstr "应用配置中心地址"
+
+msgid "Application Configruation"
+msgstr "应用配置"
+
+msgid "Application Debuger"
+msgstr "应用调试器"
+
+msgid "Application Development Book"
+msgstr "应用开发手册"
+
+msgid "Application ID"
+msgstr "应用ID"
+
+msgid "Application List"
+msgstr "应用列表"
+
+msgid "Application configuration changed!"
+msgstr "应用配置已更改!"
+
+msgid "Application option changed!"
+msgstr "应用设定已修改!"
+
+msgid "Application package must be zip file"
+msgstr "应用软件包必须为zip文件"
+
+msgid "Application started!"
+msgstr "应用已启动!"
+
+msgid "Application stoped!"
+msgstr "应用已停止!"
+
+msgid "Auto Start"
+msgstr "开机启动"
+
+msgid "Beta Usage Warning"
+msgstr "Beta版本使用警告"
+
+msgid "CLA"
+msgstr "CLA"
+
+msgid "COV TTL"
+msgstr "变化传输快照间隔"
+
+msgid "CPU Arch"
+msgstr "CPU架构"
+
+msgid "CPU Model"
+msgstr "CPU型号"
+
+msgid "Cache per File"
+msgstr "缓存单文件数据量"
+
+msgid "Cannot enable beta. Error: %s"
+msgstr "不能开启使用Beta版本。错误："
+
+msgid "Change"
+msgstr "修改"
+
+msgid "Check Beta"
+msgstr "检查Beta版本"
+
+msgid "Check Updates"
+msgstr "检查更新"
+
+msgid "Check updates done!"
+msgstr "检查更新完成！"
+
+msgid "Cloud"
+msgstr "云"
+
+msgid "Cloud Host"
+msgstr "云服务器"
+
+msgid "Cloud ID"
+msgstr "云ID"
+
+msgid "Cloud Port"
+msgstr "云服务器端口"
+
+msgid "Cloud Settings"
+msgstr "云平台配置"
+
+msgid "Cloud Tiemout"
+msgstr "超时时间"
+
+msgid "Cloud option is changed, you need restart FreeIOE to apply changes!"
+msgstr "云平台设定已修改，重启FreeIOE网关后才能使之生效!"
+
+msgid "Code"
+msgstr "源代码"
+
+msgid "Comm Data Watcher"
+msgstr "报文监视"
+
+msgid "Comm Upload"
+msgstr "报文上送"
+
+msgid "Commands"
+msgstr "指令"
+
+msgid "Comms"
+msgstr "通讯报文"
+
+msgid "Configuration"
+msgstr "配置"
+
+msgid "Contribute"
+msgstr "共享"
+
+msgid "Control"
+msgstr "控制项"
+
+msgid "Create"
+msgstr "创建"
+
+msgid "Create an new application"
+msgstr "创建新应用"
+
+msgid "Dashboard"
+msgstr "仪表盘"
+
+msgid "Data Cache"
+msgstr "断线缓存"
+
+msgid "Data Cache Options"
+msgstr "断线缓存选项"
+
+msgid "Data Upload"
+msgstr "数据上送"
+
+msgid "Data Upload Options"
+msgstr "数据传输选项"
+
+msgid "Description"
+msgstr "描述"
+
+msgid "Development Book"
+msgstr "开发手册"
+
+msgid "Device"
+msgstr "设备"
+
+msgid "Device List"
+msgstr "设备列表"
+
+msgid "Device Reboot"
+msgstr "设备重启"
+
+msgid "Device Template"
+msgstr "设备模板"
+
+msgid "Device command fired!"
+msgstr "设备命令已发送"
+
+msgid "Device output fired!"
+msgstr "设备输出已发送"
+
+msgid "Device will be reboot after five seconds!"
+msgstr "设备将在5秒钟后重启"
+
+msgid "Devices"
+msgstr "设备"
+
+msgid "Devices List"
+msgstr "设备列表"
+
+msgid "Discussion forum"
+msgstr "论坛"
+
+msgid "Document"
+msgstr "文档"
+
+msgid "Document Index"
+msgstr "文档索引"
+
+msgid "Documents"
+msgstr "文档"
+
+msgid "Enable Cloud Web Mapping"
+msgstr "开启Web映射"
+
+msgid "Enable Configuration Upload"
+msgstr "开启配置自动上传"
+
+msgid "Enable SymLink Connect"
+msgstr "开启SymLink连接"
+
+msgid "Event List"
+msgstr "事件列表"
+
+msgid "Event Upload"
+msgstr "事件上传"
+
+msgid "Events"
+msgstr "事件"
+
+msgid "Extension List"
+msgstr "扩展列表"
+
+msgid "Extensions"
+msgstr "扩展库"
+
+msgid "Failed to check system updates"
+msgstr "发送检查系统更新请求失败"
+
+msgid "Failed to check system version"
+msgstr "发送检测系统版本请求失败"
+
+msgid "Failed to get application configuration"
+msgstr "获取应用配置失败"
+
+msgid "Failed to send request"
+msgstr "发送请求失败"
+
+msgid "Failed to send request "
+msgstr "请求发送失败"
+
+msgid "Failed to send start request"
+msgstr "发送启动命令失败"
+
+msgid "Failed to send stop request"
+msgstr "发送停止命令失败"
+
+msgid "Failed to send system restart request"
+msgstr "发送系统重启请求失败"
+
+msgid "Failed to send uninstall request"
+msgstr "发送卸载请求失败"
+
+msgid "Failed to send upgrade request"
+msgstr "发送升级请求失败"
+
+msgid "Fetch file from server"
+msgstr "从服务器重新获取文件"
+
+msgid "File Editor"
+msgstr "文件编辑器"
+
+msgid "Fire Frequence"
+msgstr "发送周期"
+
+msgid "Forum"
+msgstr "社区"
+
+msgid "FreeIOE"
+msgstr "FreeIOE"
+
+msgid "FreeIOE Cloud Settings"
+msgstr "FreeIOE 云配置"
+
+msgid "FreeIOE Forum"
+msgstr "FreeIOE 论坛"
+
+msgid "FreeIOE Uptime"
+msgstr "FreeIOE 运行时长"
+
+msgid "FreeIOE Wiki"
+msgstr ""
+
+msgid "FreeIOE device in not in beta mode!"
+msgstr "FreeIOE设备并不是Beta模式!"
+
+msgid "FreeIOE is an open source platform for internet of everythings. Please follow us on GitHub!!!"
+msgstr "FreeIOE -- 为万物互联而生的开源平台。敬请关注我们的GitHub账户"
+
+msgid "Getting Started"
+msgstr "如何入门"
+
+msgid "Git Version"
+msgstr "代码版本"
+
+msgid "Help Make FreeIOE Better"
+msgstr "帮助改进FreeIOE"
+
+msgid "Home"
+msgstr "主页"
+
+msgid "ID"
+msgstr "序列号"
+
+msgid "IOE Network"
+msgstr "IOE生态圈"
+
+msgid "Information"
+msgstr "信息"
+
+msgid "Inputs"
+msgstr "输入项"
+
+msgid "Installed Application List"
+msgstr "安装应用列表"
+
+msgid "Installed Extensions"
+msgstr "已安装的扩展"
+
+msgid "Instance Name"
+msgstr "实例名"
+
+msgid "Introduction"
+msgstr "介绍"
+
+msgid "Issue Tracker"
+msgstr "问题跟踪"
+
+msgid "Learn more"
+msgstr "了解更多"
+
+msgid "Loading"
+msgstr "加载中..."
+
+msgid "Log Upload"
+msgstr "日志上送"
+
+msgid "Log Watcher"
+msgstr "日志监视"
+
+msgid "Login"
+msgstr "登入"
+
+msgid "Logout"
+msgstr "登出"
+
+msgid "Logs"
+msgstr "日志"
+
+msgid "Max File Count"
+msgstr "最大文件数量"
+
+msgid "Meta Information"
+msgstr "元信息"
+
+msgid "More Information"
+msgstr "更多信息"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "New Application"
+msgstr "新应用"
+
+msgid "New Instance Name"
+msgstr "新示例名"
+
+msgid "New application"
+msgstr "新应用"
+
+msgid "No"
+msgstr "否"
+
+msgid "OS"
+msgstr "操作系统"
+
+msgid "OS Uptime"
+msgstr "OS 运行时长"
+
+msgid "Offline"
+msgstr "离线"
+
+msgid "Online"
+msgstr "在线"
+
+msgid "Online Editor"
+msgstr "在线编辑"
+
+msgid "Online Editor "
+msgstr "在线编辑 "
+
+msgid "Oooops! Error %d :("
+msgstr "Oooops! Error %d :("
+
+msgid "Oooops! Sorry The Page Not Found :("
+msgstr "Oooops! Sorry The Page Not Found :("
+
+msgid "Option is invalid!"
+msgstr "非法选项"
+
+msgid "Outputs"
+msgstr "输出项"
+
+msgid "PKG option is changed!"
+msgstr "软件包配置项修改成功"
+
+msgid "Package File"
+msgstr "软件包"
+
+msgid "Password"
+msgstr "密码"
+
+msgid "Password Retyped Incorrect!"
+msgstr "两次密码不一致"
+
+msgid "Password updated!!"
+msgstr "密码已修改"
+
+msgid "Profile"
+msgstr "资料"
+
+msgid "Quality"
+msgstr "质量戳"
+
+msgid "Query application updates"
+msgstr "在线检测应用更新"
+
+msgid "Query extension updates"
+msgstr "检查扩展更新"
+
+msgid "Re-Type"
+msgstr "重新输入"
+
+msgid "Refresh"
+msgstr "刷新"
+
+msgid "Reinstall From Store"
+msgstr "重新安装"
+
+msgid "Remember Me"
+msgstr "记住我"
+
+msgid "Remove Cloud Web Mapping"
+msgstr "关闭Web映射"
+
+msgid "Remove SymLink Connect"
+msgstr "删除SymLink连接"
+
+msgid "Rename Application"
+msgstr "重命名应用"
+
+msgid "Rename application"
+msgstr "重命名应用"
+
+msgid "Restart"
+msgstr "重启"
+
+msgid "Return the Homepage"
+msgstr "返回主页"
+
+msgid "Rollback Time"
+msgstr "回退时间"
+
+msgid "SN"
+msgstr "序列号"
+
+msgid "Script"
+msgstr "脚本"
+
+msgid "Script is running!"
+msgstr "脚本正在运行！"
+
+msgid "Select a file from the tree."
+msgstr "从文件树中选择一个文件进行编辑"
+
+msgid "Send Command"
+msgstr "发送指令"
+
+msgid "Send Output"
+msgstr "发送输出"
+
+msgid "Send command"
+msgstr "发送指令"
+
+msgid "Send command to device"
+msgstr "发送设备指令"
+
+msgid "Send output to device"
+msgstr "发送设备输出"
+
+msgid "Setting"
+msgstr "配置"
+
+msgid "Settings"
+msgstr "配置"
+
+msgid "Sign In"
+msgstr "登入"
+
+msgid "Sign Up"
+msgstr "注册"
+
+msgid "Skip Ack"
+msgstr "无需确认"
+
+msgid "Skynet Git Version"
+msgstr "Skynet代码版本"
+
+msgid "Skynet Version"
+msgstr "Skynet版本"
+
+msgid "Source code"
+msgstr "源代码"
+
+msgid "Start Application"
+msgstr "开启应用"
+
+msgid "Stat Upload"
+msgstr "分析数据上送"
+
+msgid "Stop Application"
+msgstr "停止应用"
+
+msgid "Sys Logs"
+msgstr "SKYNET日志"
+
+msgid "System Control"
+msgstr "系统控制"
+
+msgid "System Settings"
+msgstr "系统配置"
+
+msgid "System Time"
+msgstr "系统时间"
+
+msgid "System Upgrade"
+msgstr "系统升级"
+
+msgid "System upgrade ack is done!"
+msgstr "系统升级确认已完成!"
+
+msgid "System upgrade is done! System will be offline for a few seconds!"
+msgstr "系统更新成功！系统需要离线一些时间!"
+
+msgid "System will be restart after five seconds!"
+msgstr "系统将在5秒钟后重启"
+
+msgid "Test View Page"
+msgstr "测试浏览页面"
+
+msgid "The COV TTL cannot be less than 60 seconds"
+msgstr "变化传输的快照间隔不能低于60秒"
+
+msgid "The Data Cache File count limit cannot more than 4096"
+msgstr "断线缓存文件总数不能大于4096"
+
+msgid "The Data Cache Fire Freq cannot more than 1000 ms"
+msgstr "断线缓存发送周期不能小于1000毫秒"
+
+msgid "The Data Cache Per File cannot be less than 1024"
+msgstr "断线缓存文件数据容量不能小于1024"
+
+msgid "The upload period cannot be less than 1000 ms (one second)"
+msgstr "周期上送的时间不能低于1000毫秒"
+
+msgid "There is no new system updates"
+msgstr "未检测到系统更新"
+
+msgid "ThingsCloud"
+msgstr "冬笋云"
+
+msgid "This will delete all local changes! Are you sure?"
+msgstr "删除本地所有的改动，是否确认?"
+
+msgid "Timestamp"
+msgstr "时间戳"
+
+msgid "Total Memory"
+msgstr "全部内存"
+
+msgid "UNAME"
+msgstr "UNAME"
+
+msgid "Uninstall Application"
+msgstr "卸载应用"
+
+msgid "Upgrade ACK"
+msgstr "升级确认"
+
+msgid "Upgrade To"
+msgstr "升级到"
+
+msgid "Upload"
+msgstr "上传"
+
+msgid "Upload Application"
+msgstr "上传应用"
+
+msgid "Upload Period"
+msgstr "周期上送间隔"
+
+msgid "Upload Settings"
+msgstr "上送配置"
+
+msgid "Upload an new application package"
+msgstr "上传应用包"
+
+msgid "User Profile"
+msgstr "用户资料"
+
+msgid "Using Beta"
+msgstr "使用Beta版本"
+
+msgid "Value"
+msgstr "值"
+
+msgid "Value Type"
+msgstr "数值类型"
+
+msgid "Version"
+msgstr "版本"
+
+msgid "Warning"
+msgstr "警告"
+
+msgid "Welcome %s"
+msgstr "欢迎 %s"
+
+msgid "Welcome in FreeIOE"
+msgstr "欢迎"
+
+msgid "Wiki"
+msgstr ""
+
+msgid "With Skynet"
+msgstr "同步升级Skynet"
+
+msgid "Write output"
+msgstr "输出"
+
+msgid "Yes"
+msgstr "是"
+
+msgid "You are not logined!"
+msgstr "您还未登录！"
+
+msgid "dmesg"
+msgstr "内核日志"
+
+msgid "seconds"
+msgstr "秒"
+
+#~ msgid "API"
+#~ msgstr "接口"
+
+#~ msgid "API Reference"
+#~ msgstr "API参考"
+
+#~ msgid "Application API"
+#~ msgstr "应用接口"
+
+#~ msgid "Application Document"
+#~ msgstr "应用文档"
+
+#~ msgid "Application Store"
+#~ msgstr "应用中心"
+
+#~ msgid "CONF_API"
+#~ msgstr "云配置接口"
+
+#~ msgid "CONF_HELPER"
+#~ msgstr "云配置帮助接口"
+
+#~ msgid "Create Applicatoin"
+#~ msgstr "创建应用"
+
+#~ msgid "Cycle Buffer"
+#~ msgstr "循环缓存"
+
+#~ msgid "DEVICE"
+#~ msgstr "设备"
+
+#~ msgid "Development Reference"
+#~ msgstr "开发参考手册"
+
+#~ msgid "EVENT"
+#~ msgstr "事件类型和等级"
+
+#~ msgid "FT CSV Parser"
+#~ msgstr "FT CSV解析器"
+
+#~ msgid "FreeIOE System API"
+#~ msgstr "FreeIOE系统接口"
+
+#~ msgid "Help"
+#~ msgstr "帮助"
+
+#~ msgid "INI Parser"
+#~ msgstr "INI解析器"
+
+#~ msgid "LOGGER"
+#~ msgstr "日志"
+
+#~ msgid "Review"
+#~ msgstr "评价"
+
+#~ msgid "STAT"
+#~ msgstr "分析数据"
+
+#~ msgid "SYS"
+#~ msgstr "系统接口"
+
+#~ msgid "SerialChannel"
+#~ msgstr "串口通道"
+
+#~ msgid "Skynet Wiki"
+#~ msgstr "Skynet Wiki"
+
+#~ msgid "SocketChannel"
+#~ msgstr "网络接口"
+
+#~ msgid "Source Code"
+#~ msgstr "FreeIOE源码"
+
+#~ msgid "Translation Hub"
+#~ msgstr "翻译中心"
+
+#~ msgid "UUID Module"
+#~ msgstr "UUID模块"
+
+#~ msgid "User Documents"
+#~ msgstr "用户文档"
